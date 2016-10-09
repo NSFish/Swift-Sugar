@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SwiftSugarFramework
+@testable import SwiftSugar
 
 class ArrayExtensionsTests: XCTestCase {
 
