@@ -8,7 +8,7 @@
 
 import Foundation
 
-public func zip<X,Y>(listX : [X], listY : [Y]) -> [(X,Y)] {
+public func zip<X,Y>(_ listX : [X], listY : [Y]) -> [(X,Y)] {
     
     if listX.count == 0 || listY.count == 0 {
         return []

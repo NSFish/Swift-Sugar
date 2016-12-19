@@ -9,33 +9,33 @@
 import Foundation
 
 extension Int {
-    public func times(@noescape `repeat`: Void -> Void) {
+    public func times(_ repeat: (Void) -> Void) {
         
         for _ in 0..<self {
             `repeat`()
         }
     }
     
-    public func timesWithIndex(@noescape `repeat`: (index: Int) -> Void) {
+    public func timesWithIndex(_ repeat: (_ index: Int) -> Void) {
         
         for i in 0..<self {
-            `repeat`(index: i)
+            `repeat`(i)
         }
     }
     
-    public func upTo(upperLimit:Int, @noescape doTask:(number: Int) -> Void) {
+    public func upTo(_ upperLimit:Int, doTask: (_ number: Int) -> Void) {
         
         for i in self..<upperLimit{
-            doTask(number: i)
+            doTask(i)
         }
     }
     
-    public func downTo(lowerLimit:Int, @noescape doTask:(number: Int) -> Void) {
+    public func downTo(_ lowerLimit:Int, doTask: (_ number: Int) -> Void) {
         
         let range = lowerLimit...self
         
-        for i in range.reverse() {
-            doTask(number: i)
+        for i in range.reversed() {
+            doTask(i)
         }
     }
 }

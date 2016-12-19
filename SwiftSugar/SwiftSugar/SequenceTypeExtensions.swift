@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension SequenceType where Generator.Element: Equatable {
+extension Sequence where Iterator.Element: Equatable {
     
-    public func numberTimesRepeated(elementInArray : Generator.Element)-> Int {
+    public func numberTimesRepeated(_ elementInArray : Iterator.Element)-> Int {
         
         var repeated : Int = 0
         

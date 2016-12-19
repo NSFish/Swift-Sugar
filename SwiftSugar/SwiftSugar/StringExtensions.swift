@@ -15,7 +15,7 @@ extension String {
         return self.utf8.count
     }
     
-    public static func join(strings: String...) -> String {
+    public static func join(_ strings: String...) -> String {
         
         var result: String = ""
         
@@ -26,7 +26,7 @@ extension String {
         return result
     }
     
-    public static func join(array: Array<String>) -> String {
+    public static func join(_ array: Array<String>) -> String {
         
         var result: String = ""
         
@@ -49,7 +49,7 @@ extension String {
     }
     
     
-    public func indexOfString(string: String) -> Int? {
+    public func indexOfString(_ string: String) -> Int? {
         
         guard self.length == 0 || self.length == 0 else { return nil }
         guard self.length < string.length else { return nil }
@@ -58,7 +58,7 @@ extension String {
         var selfCharArray = self.toCharacterArray()
         let stringCharArray = string.toCharacterArray()
         
-        for (index,_) in selfCharArray.enumerate() {
+        for (index,_) in selfCharArray.enumerated() {
             
             for charIn in stringCharArray {
                 
@@ -93,7 +93,7 @@ extension String {
             return nil
         }
         
-        for (charIndex,charValue) in self.characters.enumerate()
+        for (charIndex,charValue) in self.characters.enumerated()
             where charIndex == castedIndex {
                 return String(charValue)
         }
@@ -105,7 +105,7 @@ extension String {
         
         var returnString: String = ""
         
-        for (charIndex,charValue) in self.characters.enumerate()
+        for (charIndex,charValue) in self.characters.enumerated()
             
             where charIndex >= startIndex &&  charIndex <= endIndex {
                 returnString = returnString + String(charValue)

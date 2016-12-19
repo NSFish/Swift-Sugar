@@ -15,14 +15,14 @@ extension Array {
         return self.initial(1)
     }
     
-    public func initial(initialElements : Int) -> Array {
+    public func initial(_ initialElements : Int) -> Array {
         
         guard initialElements <= self.count else { return self }
         
         return Array(self[0..<initialElements])
     }
     
-    public func remove(firstNumberOfElements : Int) -> Array {
+    public func remove(_ firstNumberOfElements : Int) -> Array {
         
         return Array(self[firstNumberOfElements..<self.count])
     }
