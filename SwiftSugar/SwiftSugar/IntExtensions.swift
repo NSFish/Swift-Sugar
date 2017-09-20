@@ -9,7 +9,7 @@
 import Foundation
 
 extension Int {
-    public func times(_ repeat: (Void) -> Void) {
+    public func times(_ repeat: () -> Void) {
         
         for _ in 0..<self {
             `repeat`()
